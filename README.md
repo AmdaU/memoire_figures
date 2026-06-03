@@ -40,8 +40,6 @@
   <sub>Density matrix as an MPO</sub>
 </p>
 
-The same figure (`noise_channel`) rendered with four different color themes:
-
 <table align="center">
   <tr>
     <td align="center"><img src="assets/preview/noise_channel_royer_lab_main.png" width="100%" alt="noise_channel — royer_lab_main theme"><br><sub><code>royer_lab_main</code></sub></td>
