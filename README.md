@@ -5,23 +5,40 @@
   <sub>GKP state Wigner function with Gaussian envelope</sub>
 </p>
 
-<table align="center">
-  <tr>
-    <td align="center" width="50%"><img src="assets/preview/noise_channel.png" width="100%" alt="Noise channel"><br><sub>Noise channel</sub></td>
-    <td align="center" width="50%"><img src="assets/preview/sBs.png" width="100%" alt="sBs stabilization circuit"><br><sub>sBs stabilization circuit</sub></td>
-  </tr>
-  <tr>
-    <td align="center" width="50%"><img src="assets/preview/superop.png" width="100%" alt="Superoperator as a tensor network"><br><sub>Superoperator as a tensor network</sub></td>
-    <td align="center" width="50%"><img src="assets/preview/weird_structure.png" width="100%" alt="Tensor-network coarse-graining"><br><sub>Tensor-network coarse-graining</sub></td>
-  </tr>
-  <tr>
-    <td align="center" width="50%"><img src="assets/preview/orthogonality_center_expval.png" width="100%" alt="MPS orthogonality center"><br><sub>MPS orthogonality center</sub></td>
-    <td align="center" width="50%"><img src="assets/preview/patrity_tn_stab.png" width="100%" alt="Parity-check stabilizer network"><br><sub>Parity-check stabilizer network</sub></td>
-  </tr>
-  <tr>
-    <td align="center" colspan="2"><img src="assets/preview/density_matrix_as_MPO.png" height="150" alt="Density matrix as an MPO"><br><sub>Density matrix as an MPO</sub></td>
-  </tr>
-</table>
+<p align="center">
+  <img src="assets/preview/noise_channel.png" height="170" alt="Noise channel"><br>
+  <sub>Noise channel</sub>
+</p>
+
+<p align="center">
+  <img src="assets/preview/sBs.png" height="170" alt="sBs stabilization circuit"><br>
+  <sub>sBs stabilization circuit</sub>
+</p>
+
+<p align="center">
+  <img src="assets/preview/superop.png" height="170" alt="Superoperator as a tensor network"><br>
+  <sub>Superoperator as a tensor network</sub>
+</p>
+
+<p align="center">
+  <img src="assets/preview/weird_structure.png" height="170" alt="Tensor-network coarse-graining"><br>
+  <sub>Tensor-network coarse-graining</sub>
+</p>
+
+<p align="center">
+  <img src="assets/preview/orthogonality_center_expval.png" height="170" alt="MPS orthogonality center"><br>
+  <sub>MPS orthogonality center</sub>
+</p>
+
+<p align="center">
+  <img src="assets/preview/patrity_tn_stab.png" height="170" alt="Parity-check stabilizer network"><br>
+  <sub>Parity-check stabilizer network</sub>
+</p>
+
+<p align="center">
+  <img src="assets/preview/density_matrix_as_MPO.png" height="150" alt="Density matrix as an MPO"><br>
+  <sub>Density matrix as an MPO</sub>
+</p>
 
 # memoire_figures
 
