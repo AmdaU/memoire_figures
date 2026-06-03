@@ -8,14 +8,17 @@ Python/matplotlib+QuTiP) et recolorée à partir d'un seul **thème de couleurs*
 afin que l'ensemble des figures demeure visuellement cohérent.
 
 <p align="center">
-  <img src="assets/preview/gkp_w_et_f_enveloppe.png" height="120" alt="Fonction de Wigner GKP avec enveloppe">
-  <img src="assets/preview/noise_channel.png" height="120" alt="Diagramme de canal de bruit">
-  <img src="assets/preview/sBs.png" height="120" alt="Circuit sBs">
-  <img src="assets/preview/superop.png" height="120" alt="Superopérateur en réseau de tenseurs">
-  <img src="assets/preview/weird_structure.png" height="120" alt="Réseau de tenseurs hexagonal et son grossissement">
-  <img src="assets/preview/density_matrix_as_MPO.png" height="120" alt="Matrice densité sous forme de MPO">
-  <img src="assets/preview/orthogonality_center_expval.png" height="120" alt="Valeur moyenne via le centre d'orthogonalité d'un MPS">
-  <img src="assets/preview/patrity_tn_stab.png" height="120" alt="Réseau de tenseurs de stabilisateurs de parité">
+  <img src="assets/preview/gkp_w_et_f_enveloppe.png" height="260" alt="Fonction de Wigner GKP avec enveloppe">
+</p>
+
+<p align="center">
+  <img src="assets/preview/noise_channel.png" height="150" alt="Diagramme de canal de bruit">
+  <img src="assets/preview/sBs.png" height="150" alt="Circuit sBs">
+  <img src="assets/preview/superop.png" height="150" alt="Superopérateur en réseau de tenseurs">
+  <img src="assets/preview/weird_structure.png" height="150" alt="Réseau de tenseurs hexagonal et son grossissement">
+  <img src="assets/preview/density_matrix_as_MPO.png" height="150" alt="Matrice densité sous forme de MPO">
+  <img src="assets/preview/orthogonality_center_expval.png" height="150" alt="Valeur moyenne via le centre d'orthogonalité d'un MPS">
+  <img src="assets/preview/patrity_tn_stab.png" height="150" alt="Réseau de tenseurs de stabilisateurs de parité">
 </p>
 
 ## Prérequis
