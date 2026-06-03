@@ -1,3 +1,28 @@
+## Examples
+
+<p align="center">
+  <img src="assets/preview/gkp_w_et_f_enveloppe.png" height="300" alt="GKP state Wigner function with envelope"><br>
+  <sub>GKP state Wigner function with Gaussian envelope</sub>
+</p>
+
+<table align="center">
+  <tr>
+    <td align="center" width="50%"><img src="assets/preview/noise_channel.png" width="100%" alt="Noise channel"><br><sub>Noise channel</sub></td>
+    <td align="center" width="50%"><img src="assets/preview/sBs.png" width="100%" alt="sBs stabilization circuit"><br><sub>sBs stabilization circuit</sub></td>
+  </tr>
+  <tr>
+    <td align="center" width="50%"><img src="assets/preview/superop.png" width="100%" alt="Superoperator as a tensor network"><br><sub>Superoperator as a tensor network</sub></td>
+    <td align="center" width="50%"><img src="assets/preview/weird_structure.png" width="100%" alt="Tensor-network coarse-graining"><br><sub>Tensor-network coarse-graining</sub></td>
+  </tr>
+  <tr>
+    <td align="center" width="50%"><img src="assets/preview/orthogonality_center_expval.png" width="100%" alt="MPS orthogonality center"><br><sub>MPS orthogonality center</sub></td>
+    <td align="center" width="50%"><img src="assets/preview/patrity_tn_stab.png" width="100%" alt="Parity-check stabilizer network"><br><sub>Parity-check stabilizer network</sub></td>
+  </tr>
+  <tr>
+    <td align="center" colspan="2"><img src="assets/preview/density_matrix_as_MPO.png" height="150" alt="Density matrix as an MPO"><br><sub>Density matrix as an MPO</sub></td>
+  </tr>
+</table>
+
 # memoire_figures
 
 > **English version follows** — [English](#english-version).
@@ -6,20 +31,6 @@ Figures faîtes pour le mémoire de Jean-Baptiste Bertrand. Chaque figure est
 générée à partir de sa source (Asymptote, LaTeX/quantikz ou
 Python/matplotlib+QuTiP) et recolorée à partir d'un seul **thème de couleurs**,
 afin que l'ensemble des figures demeure visuellement cohérent.
-
-<p align="center">
-  <img src="assets/preview/gkp_w_et_f_enveloppe.png" height="260" alt="Fonction de Wigner GKP avec enveloppe">
-</p>
-
-<p align="center">
-  <img src="assets/preview/noise_channel.png" height="150" alt="Diagramme de canal de bruit">
-  <img src="assets/preview/sBs.png" height="150" alt="Circuit sBs">
-  <img src="assets/preview/superop.png" height="150" alt="Superopérateur en réseau de tenseurs">
-  <img src="assets/preview/weird_structure.png" height="150" alt="Réseau de tenseurs hexagonal et son grossissement">
-  <img src="assets/preview/density_matrix_as_MPO.png" height="150" alt="Matrice densité sous forme de MPO">
-  <img src="assets/preview/orthogonality_center_expval.png" height="150" alt="Valeur moyenne via le centre d'orthogonalité d'un MPS">
-  <img src="assets/preview/patrity_tn_stab.png" height="150" alt="Réseau de tenseurs de stabilisateurs de parité">
-</p>
 
 ## Prérequis
 
