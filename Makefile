@@ -58,13 +58,12 @@ PYTHON := .venv/bin/python3
 # ---------------------------------------------------------------------
 #  Source discovery
 # ---------------------------------------------------------------------
-ASY       = $(shell find ./figs -name "*.asy" -type f)
+# TN.asy is the shared drawing library (included by other figures), not a figure.
+ASY       = $(filter-out ./figs/TN.asy,$(shell find ./figs -name "*.asy" -type f))
 FIGS_TEX  = $(shell find ./figs -maxdepth 1 -name "*.tex" -type f)
 STATES    = $(shell find ./figs/states -name "*.dat" -type f)
 HEATMAPS  = $(shell find ./figs/heatmaps -name "*.dat" -type f)
 GRAPHS    = $(shell find ./figs/graphs -name "*.dat" -type f)
-GAUGE_CSV = $(shell find ./figs/gauge_graphs -name "*.csv" -type f)
-GAUGE_FIG = figs/gauge_graphs/gauge_plot.pdf
 
 # Asymptote files declare their output format inside the source.
 ASY_GIF_SOURCES = $(shell grep -r -l --include="*.asy" 'settings.outformat = "gif"' ./figs || true)
@@ -82,10 +81,9 @@ GRAPHS_FIGS  = $(GRAPHS:.dat=.pdf)
 
 # Everything that `make` produces.
 ALL_FIGS = $(ASY_PDF_OUTS) $(ASY_PNG_OUTS) $(ASY_GIF_OUTS) $(TEX_FIGS) \
-           $(STATES_FIGS) $(HEATMAPS_FIGS) $(GRAPHS_FIGS) \
-           $(GAUGE_FIG)
+           $(STATES_FIGS) $(HEATMAPS_FIGS) $(GRAPHS_FIGS)
 
-.PHONY: all figs help list-themes asy tex states heatmaps graphs gauge \
+.PHONY: all figs help list-themes asy tex states heatmaps graphs \
         clean cleanfigs distclean
 
 all: figs
@@ -98,7 +96,6 @@ tex:      $(TEX_FIGS)
 states:   $(STATES_FIGS)
 heatmaps: $(HEATMAPS_FIGS)
 graphs:   $(GRAPHS_FIGS)
-gauge:    $(GAUGE_FIG)
 
 # ---------------------------------------------------------------------
 #  Generated color definitions (derived from the active colors.json)
@@ -144,9 +141,6 @@ $(STATES_FIGS): %_wigner.pdf: %.dat .venv/.stamp colors.json figs/states/wigner.
 $(GRAPHS_FIGS): %.pdf: %.dat .venv/.stamp colors.json figs/graphs/make_plot.py
 	$(PYTHON) figs/graphs/make_plot.py $(notdir $(basename $<))
 
-$(GAUGE_FIG): $(GAUGE_CSV) .venv/.stamp colors.json figs/gauge_graphs/plot_gauge.py
-	$(PYTHON) figs/gauge_graphs/plot_gauge.py gauge_plot
-
 # ---------------------------------------------------------------------
 #  Python virtual environment
 # ---------------------------------------------------------------------
@@ -175,7 +169,7 @@ help:
 	@echo "  make THEME=<name>          build all figures with a given theme"
 	@echo "  make <path/to/fig.pdf>     build a single figure"
 	@echo ""
-	@echo "  Group targets: asy tex states heatmaps graphs gauge"
+	@echo "  Group targets: asy tex states heatmaps graphs"
 	@echo ""
 	@echo "  make list-themes           list color themes"
 	@echo "  make clean                 remove LaTeX/asy junk + color caches"

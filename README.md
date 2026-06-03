@@ -2,24 +2,33 @@
 
 > **English version follows** — [English](#english-version).
 
-Système de construction autonome pour des figures de recherche. Chaque figure
-est générée à partir de sa source (Asymptote, LaTeX/quantikz ou
+Figures faîtes pour le mémoire de Jean-Baptiste Bertrand. Chaque figure est
+générée à partir de sa source (Asymptote, LaTeX/quantikz ou
 Python/matplotlib+QuTiP) et recolorée à partir d'un seul **thème de couleurs**,
 afin que l'ensemble des figures demeure visuellement cohérent.
 
-Ces figures sont celles utilisées pour le mémoire de **Jean-Baptiste Bertrand**.
-Elles sont destinées à être regroupées avec d'autres figures du groupe, et
-plusieurs d'entre elles pourraient servir dans d'autres contextes.
+<p align="center">
+  <img src="assets/preview/gkp_w_et_f_enveloppe.png" height="120" alt="Fonction de Wigner GKP avec enveloppe">
+  <img src="assets/preview/noise_channel.png" height="120" alt="Diagramme de canal de bruit">
+  <img src="assets/preview/sBs.png" height="120" alt="Circuit sBs">
+  <img src="assets/preview/superop.png" height="120" alt="Superopérateur en réseau de tenseurs">
+  <img src="assets/preview/weird_structure.png" height="120" alt="Réseau de tenseurs hexagonal et son grossissement">
+  <img src="assets/preview/density_matrix_as_MPO.png" height="120" alt="Matrice densité sous forme de MPO">
+  <img src="assets/preview/orthogonality_center_expval.png" height="120" alt="Valeur moyenne via le centre d'orthogonalité d'un MPS">
+  <img src="assets/preview/patrity_tn_stab.png" height="120" alt="Réseau de tenseurs de stabilisateurs de parité">
+</p>
 
 ## Prérequis
 
 Les éléments suivants doivent se trouver dans votre `PATH` :
 
 - `make`
-- `python3` (3.10+) (optionnel)
+- `python3` (3.10+)
 - `asy` (Asymptote) — pour les figures de diagrammes (optionnel)
-- `lualatex` avec les paquets `quantikz`/`tikz`/`physics` — pour les figures de circuits (optionnel)
-- Une installation LaTeX fonctionnelle avec `pdflatex` (matplotlib s'en sert pour le rendu du texte) (optionnel)
+- `lualatex` avec les paquets `quantikz`/`tikz`/`physics` — pour les figures de
+  circuits (optionnel)
+- Une installation LaTeX fonctionnelle avec `pdflatex` (matplotlib s'en sert
+  pour le rendu du texte) (optionnel)
 
 Ceux marqués « optionnel » ne sont nécessaires que pour certaines figures.
 
@@ -48,18 +57,19 @@ couleurs sémantiques à des valeurs hexadécimales :
 
 ```json
 {
-    "primary":    "#009199",
-    "secondary":  "#D75F57",
-    "tertiary":   "#9DAF9A",
-    "mainred":    "#D75F57",
-    "mainblue":   "#009199",
-    "error":      "#d81d04",
-    "background": "#ffffff",
-    "textcolor":  "#000000"
+  "primary": "#009199",
+  "secondary": "#D75F57",
+  "tertiary": "#9DAF9A",
+  "mainred": "#D75F57",
+  "mainblue": "#009199",
+  "error": "#d81d04",
+  "background": "#ffffff",
+  "textcolor": "#000000"
 }
 ```
 
-Pour ajouter le vôtre, il suffit de déposer un fichier JSON contenant tous les champs ci-haut !
+Pour ajouter le vôtre, il suffit de déposer un fichier JSON contenant tous les
+champs ci-haut !
 
 Le thème **actif** est celui qui est présentement copié dans `./colors.json`
 (géré par le Makefile). Construire avec `make THEME=<nom>` copie
@@ -85,14 +95,13 @@ de thème force un recoloriage complet.
 
 ### Cibles de groupe
 
-| cible      | construit                                           |
-|------------|-----------------------------------------------------|
-| `asy`      | tous les diagrammes Asymptote                       |
-| `tex`      | tous les circuits LaTeX/quantikz                    |
-| `states`   | tous les tracés de fonctions de Wigner (QuTiP)      |
-| `heatmaps` | la heatmap d'exemple (canal de Pauli)               |
-| `graphs`   | le graphique d'exemple (courbes simples)            |
-| `gauge`    | le graphique de jauge                               |
+| cible      | construit                                      |
+| ---------- | ---------------------------------------------- |
+| `asy`      | tous les diagrammes Asymptote                  |
+| `tex`      | tous les circuits LaTeX/quantikz               |
+| `states`   | tous les tracés de fonctions de Wigner (QuTiP) |
+| `heatmaps` | la heatmap d'exemple (canal de Pauli)          |
+| `graphs`   | le graphique d'exemple (courbes simples)       |
 
 ## Comment fonctionne le coloriage
 
@@ -151,8 +160,7 @@ memoire_figures/
     ├── TNs/              # diagrammes de réseaux de tenseurs (Asymptote)
     ├── states/           # fonctions de Wigner (QuTiP, à partir de .dat)
     ├── heatmaps/         # heatmap d'exemple de canal de Pauli (plot.py + heatmap_exemple.dat)
-    ├── graphs/           # graphique d'exemple (make_plot.py + graph_exemple.dat)
-    └── gauge_graphs/     # tracé de jauge (à partir de .csv)
+    └── graphs/           # graphique d'exemple (make_plot.py + graph_exemple.dat)
 ```
 
 ## Licence
@@ -173,24 +181,22 @@ Le texte complet de la licence se trouve dans le fichier [`LICENSE`](LICENSE).
 
 # memoire_figures (English version)
 
-Self-contained build system for research figures. Every figure is generated
-from source (Asymptote, LaTeX/quantikz, or Python/matplotlib+QuTiP) and is
-recolored from a single **color theme** so the whole figure set stays visually
-consistent.
-
-These figures are the ones used for **Jean-Baptiste Bertrand**'s master's
-thesis (*mémoire*). They are meant to be collected alongside other figures from
-the group, and many of them may be useful in other contexts.
+Figures made for Jean-Baptiste Bertrand's master thesis. Every figure is
+generated from source (Asymptote, LaTeX/quantikz, or Python/matplotlib+QuTiP)
+and is recolored from a single **color theme** so the whole figure set stays
+visually consistent.
 
 ## Requirements
 
 These must be on your `PATH`:
 
 - `make`
-- `python3` (3.10+) (optional)
+- `python3` (3.10+)
 - `asy` (Asymptote) — for the diagram figures (optional)
-- `lualatex` with the `quantikz`/`tikz`/`physics` packages — for the circuit figures (optional)
-- A working LaTeX install with `pdflatex` (matplotlib uses it for text rendering) (optional)
+- `lualatex` with the `quantikz`/`tikz`/`physics` packages — for the circuit
+  figures (optional)
+- A working LaTeX install with `pdflatex` (matplotlib uses it for text
+  rendering) (optional)
 
 Those marked "optional" are only needed for certain figures.
 
@@ -218,29 +224,28 @@ values:
 
 ```json
 {
-    "primary":    "#009199",
-    "secondary":  "#D75F57",
-    "tertiary":   "#9DAF9A",
-    "mainred":    "#D75F57",
-    "mainblue":   "#009199",
-    "error":      "#d81d04",
-    "background": "#ffffff",
-    "textcolor":  "#000000"
+  "primary": "#009199",
+  "secondary": "#D75F57",
+  "tertiary": "#9DAF9A",
+  "mainred": "#D75F57",
+  "mainblue": "#009199",
+  "error": "#d81d04",
+  "background": "#ffffff",
+  "textcolor": "#000000"
 }
 ```
 
 To add your own, just drop a JSON file with all the fields above!
 
-The **active** theme is whatever is currently copied to `./colors.json`
-(managed by the Makefile). Building with `make THEME=<name>` copies
-`themes/<name>.json` over `colors.json`, regenerates the derived color files,
-and rebuilds anything affected.
+The **active** theme is whatever is currently copied to `./colors.json` (managed
+by the Makefile). Building with `make THEME=<name>` copies `themes/<name>.json`
+over `colors.json`, regenerates the derived color files, and rebuilds anything
+affected.
 
 ## Rebuilding individual figures
 
-Figures are normal Make targets named after their output PDF/PNG. Build just
-one — handy when you only want to tweak a single figure or try it in another
-theme:
+Figures are normal Make targets named after their output PDF/PNG. Build just one
+— handy when you only want to tweak a single figure or try it in another theme:
 
 ```bash
 make figs/TNs/ex.pdf
@@ -254,14 +259,13 @@ on what you changed are rebuilt. Switching themes forces a full recolor.
 
 ### Group targets
 
-| target     | builds                                            |
-|------------|---------------------------------------------------|
-| `asy`      | all Asymptote diagrams                             |
-| `tex`      | all LaTeX/quantikz circuits                        |
-| `states`   | all Wigner-function plots (QuTiP)                  |
-| `heatmaps` | the example heatmap (Pauli channel)                |
-| `graphs`   | the example graph (simple curves)                  |
-| `gauge`    | the gauge graph                                    |
+| target     | builds                              |
+| ---------- | ----------------------------------- |
+| `asy`      | all Asymptote diagrams              |
+| `tex`      | all LaTeX/quantikz circuits         |
+| `states`   | all Wigner-function plots (QuTiP)   |
+| `heatmaps` | the example heatmap (Pauli channel) |
+| `graphs`   | the example graph (simple curves)   |
 
 ## How the coloring works
 
@@ -318,18 +322,17 @@ memoire_figures/
     ├── TNs/              # tensor-network diagrams (Asymptote)
     ├── states/           # Wigner functions (QuTiP, from .dat)
     ├── heatmaps/         # example Pauli-channel heatmap (plot.py + heatmap_exemple.dat)
-    ├── graphs/           # example graph (make_plot.py + graph_exemple.dat)
-    └── gauge_graphs/     # gauge plot (from .csv)
+    └── graphs/           # example graph (make_plot.py + graph_exemple.dat)
 ```
 
 ## License
 
-This project is licensed under the **Creative Commons
-Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)** license. You are free
-to use, share, and adapt it — even commercially — as long as you:
+This project is licensed under the **Creative Commons Attribution-ShareAlike 4.0
+International (CC BY-SA 4.0)** license. You are free to use, share, and adapt it
+— even commercially — as long as you:
 
 - **credit** Jean-Baptiste Bertrand (attribution); and
-- **share** any modified version under the **same license** (so the figures
-  stay open).
+- **share** any modified version under the **same license** (so the figures stay
+  open).
 
 The full license text is in the [`LICENSE`](LICENSE) file.
