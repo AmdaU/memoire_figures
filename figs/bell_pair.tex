@@ -1,0 +1,11 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{quantikz_head}
+\begin{document}
+% make a bracket around the two first wires
+\begin{quantikz}[wire types={n,n,n}]
+	\lstick[2]{$\boldmath{|\Phi^+\rangle}$}\ar[rr,-, wiggly]&
+ \gategroup[3,steps=8,style={dashed,rounded corners, inner xsep=2pt},label style={label position=below,anchor=north,yshift=-0.2cm}]{} & \targ{}  \ar[rrrrrrr, wiggly, -] & & \gate{4 \rm \times sBs} & & \ctrl{2} &  & \gate{4 \rm \times sBs} & \\
+	  & \setwiretype{q} & & \targ{} & & & & \ctrl{1} &  & \\
+	    &  \ket{+}  &\ctrl{-2} \setwiretype{q} & \ctrl{-1} & \meter{X} & \ket{0}  \setwiretype{n} & \targ{} \setwiretype{q} & \targ{} &\meter{Z}
+\end{quantikz}
+\end{document}

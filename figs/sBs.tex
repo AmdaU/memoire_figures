@@ -1,0 +1,9 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{quantikz_head}
+%make CD a math operator
+\begin{document}
+\begin{quantikz}
+\ket{\psi} \setwiretype{n} \ar[rrrrrr, wiggly, -]&\gate{\CD(s)}\gategroup[2,steps=5,style={dash pattern=on 3pt off 3pt, rounded corners, inner xsep=2pt, line width=0.5pt}]{sBs}{}  &  & \gate{\CD(b)}  &  & \gate{\CD(s)}  &\\
+\ket{+} &\ctrl{-1}&\gate{R_x\left(\frac{\pi }{2}\right)}&\ctrl{-1}&\gate{R_x^\dagger\left(\frac{\pi}{2}\right)}&\ctrl{-1}& \meter{\ket\pm}
+\end{quantikz}
+\end{document}

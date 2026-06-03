@@ -1,0 +1,29 @@
+\ProvidesPackage{quantikz_head}[2025/10/08]
+\usepackage{quantikz}
+\usepackage{tikz}
+\usepackage{physics}
+\usetikzlibrary{quantikz2}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{arrows.meta}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\input{../AutoColors.sty.tmp}
+
+\DeclareMathOperator{\CD}{CD}
+
+% Wiggly wire styles
+\tikzset{
+	wiggly/.style={
+    decorate,
+    decoration={snake, amplitude=.4mm, segment length=3mm, aspect=0, pre length=0pt, post length=0pt},
+    shorten <=0pt,
+    shorten >=0pt,
+    line width=0.7pt
+	},
+	operator/.append style={fill=Autosecondary},
+	% my label/.append style={above right,xshift=0.3cm},
+    meter/.append style={fill=Autoprimary},
+}
+\usetikzlibrary{calc}
+
+\boldmath\bfseries

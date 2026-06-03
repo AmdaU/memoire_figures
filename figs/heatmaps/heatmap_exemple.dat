@@ -1,0 +1,14 @@
+# Données d'exemple pour la heatmap de canal de Pauli.
+#
+# Format : lignes de commentaire « # » ignorées, puis une ligne par code.
+# Chaque ligne = <nom du code> pI pX pY pZ (probabilités du canal de Pauli
+# effectif). Les noms de code connus sont associés à un symbole et à une
+# couleur du thème dans plot.py (LABEL_MAP / COLOR_MAP).
+#
+# Données semi-aléatoires : aucune mesure réelle n'est fournie dans ce dépôt.
+# Remplacez-les par vos propres probabilités (même format) pour tracer.
+# code pI pX pY pZ
+GKP-Qubit 0.912 0.041 0.018 0.029
+Repetition 0.864 0.022 0.009 0.105
+Repetition $\otimes$ GKP 0.883 0.037 0.026 0.054
+Repetition $\otimes$ GKP-Correct 0.897 0.048 0.021 0.034

@@ -1,0 +1,19 @@
+\documentclass[border=0pt]{standalone}
+\usepackage{quantikz_head}
+\begin{document}
+% make a bracket around the two first wiresJ
+
+\newcommand{\correction}{\gate[5, label style={rotate=90}]{\textbf{Correction}}}
+\newcommand{\Stab}[3]{%
+    \gategroup[3, steps=3, style={dash pattern=on 3pt off 3pt, rounded corners, inner xsep=0pt, line width=0.5pt, inner ysep=0pt}, label style={label position=#2, yshift=#3}]{\sc S#1}
+}
+
+
+\begin{quantikz}[wire types={q,n,q,n,q}, row sep=0.3cm]
+		&\ctrl{1}\Stab{1}{above}{0}& \qw		& \qw						&&			&				& \correction	&\\
+\ket{0}	&\targ{}\qw 			& \targ{}\qw 	& \meter[1]{}\qw			&\cw&\cw	&\cw 			& \cw \\
+		&\qw 					& \ctrl{-1}		&& \ctrl{1}\Stab{2}{below}{-0.5cm}	&			& 				& 				&\\
+		&						&& \ket{0}		& \targ{}\qw				& \targ{}\qw& \meter{}\qw	& \cw \\
+		&\qw					& 				&&							& \ctrl{-1}	&				&				&
+\end{quantikz}
+\end{document}

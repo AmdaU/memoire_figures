@@ -1,0 +1,15 @@
+\documentclass[border=0pt]{standalone}
+\usepackage{quantikz_head}
+\begin{document}
+% make a bracket around the two first wiresJ
+\newcommand{\group}{\gategroup[5,steps=6,style={dash pattern=on 3pt off 3pt, rounded corners, inner xsep=10pt, line width=0.5pt, inner ysep=15pt}]{\(\times n\)}}
+\newcommand{\noise}{\gate[5, style={starburst, starburst point height=3mm, fill=Autoprimary, inner ysep=-10pt}]{\text{\textbf{bruit}}}}
+
+\begin{quantikz}[wire types={n,n,n,n,n}, row sep=0.3cm]
+	\ket{\bar 0}_{\rm GKP} \ar[rrrrrrrrrr,-, wiggly] &\gate[5, style={inner ysep=0pt, inner xsep=-5pt}, label style={rotate=90}]{\text{\textbf{encodage}}}  &&\noise \group&    & \gate{m \times {\rm sBs}}  & \meter[3]{S_1} &                &     \gate[5, label style={rotate=90}, style={inner xsep=-5pt, xshift=-5pt}]{\text{\textbf{correction}}} &&\\
+	                                            &&&                                                               &&                            &                							 & \cw            & \cw & &\\
+	\ket{\bar \psi}_{\rm GKP} \ar[rrrrrrrrrr,-, wiggly] &&&											 					&& \gate{m \times {\rm sBs}} & 			  	 							 & \meter[wires=3, label style={below, yshift=-1.7cm}]{S_2} &     &&\\
+	                                            &&&                                                               &&                           &                							 &                & \cw &&\\
+	\ket{\bar 0}_{\rm GKP} \ar[rrrrrrrrrr,-, wiggly] &&&											 					&& \gate{m \times {\rm sBs}}  &               							 &                & 	&&
+\end{quantikz}
+\end{document}

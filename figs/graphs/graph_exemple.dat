@@ -1,0 +1,19 @@
+# Données d'exemple pour la chaîne de production de graphiques.
+#
+# Format : des lignes de commentaire commençant par « # » sont ignorées,
+# puis UNE ligne d'en-tête (noms de colonnes), puis des lignes de nombres
+# séparés par des virgules. La première colonne est l'axe des x ; chaque
+# colonne suivante devient une courbe, étiquetée par son nom d'en-tête.
+#
+# Aucune donnée réelle n'est fournie dans ce dépôt : remplacez ce fichier
+# par vos propres données (même format) pour tracer vos courbes.
+x,Courbe A,Courbe B,Courbe C
+0,0.00,1.00,0.20
+1,0.12,0.78,0.45
+2,0.25,0.61,0.70
+3,0.37,0.47,0.88
+4,0.50,0.37,0.95
+5,0.62,0.29,0.88
+6,0.75,0.22,0.70
+7,0.87,0.17,0.45
+8,1.00,0.14,0.20
